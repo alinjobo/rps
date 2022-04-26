@@ -16,7 +16,9 @@ if(playersel=="scissors" && computersel=="paper")
 return "scissors beat paper you win"
 if(playersel=="scissors" && computersel=="rock")
 return "rock beats scissors .you lose"
+return "Enter a valid option"
 }
+
 
 function computerplay(){
     const selection = ["rock","paper","scissors"]
