@@ -1,4 +1,4 @@
-let playerchoice=prompt("Play your hand (rock/paper/scissors")
+//let playerchoice=prompt("Play your hand (rock/paper/scissors")
 
 
 function round(playersel,computersel){
@@ -20,7 +20,15 @@ return "rock beats scissors .you lose"
 
 function computerplay(){
     const selection = ["rock","paper","scissors"]
-    console.log( selection[Math.floor(Math.random()*selection.length)])
+    return( selection[Math.floor(Math.random()*selection.length)])
     
 }
-computerplay()
+function game()
+{
+    for(let i=0;i<5;i++){
+        let playerchoice=prompt("Play your hand (rock/paper/scissors")
+        const player=playerchoice.toLowerCase()
+        alert(round(player,computerplay()))
+    }
+}
+game()
