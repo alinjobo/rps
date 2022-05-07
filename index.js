@@ -48,7 +48,29 @@ function round(e){
     if(playersel=="scissors" && computersel=="rock"){
         cwin();
     result.textContent=  "rock beats scissors .you lose"}
-    //result.textContent=  "Enter a valid option"
+    if(computerscore==5){
+        console.log("comp win")
+        result.style.color='blue';
+        result.style.fontSize="xx-large";
+
+        result.textContent="Computer won the game";
+        rock.removeEventListener('click',round);
+        paper.removeEventListener('click',round);
+        scissors.removeEventListener('click',round);
+    
+    }
+    if(playerscore==5){
+        console.log("you win")
+        result.style.color='blue';
+        result.style.fontSize="xx-large";
+        result.textContent="You won the game";
+       
+        rock.removeEventListener('click',round);
+        paper.removeEventListener('click',round);
+        scissors.removeEventListener('click',round);
+    
+    }
+    
 }
 
 
@@ -60,7 +82,6 @@ const scissors = document.querySelector("#scissors");
 rock.addEventListener('click',round);
 paper.addEventListener('click',round);
 scissors.addEventListener('click',round);
-
 
 
 
